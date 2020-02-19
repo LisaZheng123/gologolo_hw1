@@ -382,8 +382,6 @@ export default class AppsterView {
     }
 
 
-
-
     /**
      * This function will navigate the user to the home (i.e. welcome) screen.
      */
@@ -522,5 +520,15 @@ export default class AppsterView {
    showDialog() {
        let dialog = document.getElementById(AppsterGUIId.MODAL_YES_NO_DIALOG);
        dialog.classList.add(AppsterGUIClass.IS_VISIBLE);
+   }
+
+   modalAppears() {
+       let dialog = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
+       dialog.classList.add(AppsterGUIClass.IS_VISIBLE);
+   }
+
+   modalDisappears() {
+        let dialog = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
+        dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
    }
 }

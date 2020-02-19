@@ -1,3 +1,5 @@
+import AppWork from './AppWork.js'
+
 export default class AppsterModel {
     constructor() {
         // THE RECENT WORK LIST
@@ -122,5 +124,40 @@ export default class AppsterModel {
         this.listToEdit = this.createNewWork();
         this.prependList(this.listToEdit);
         this.view.loadListData(this.listToEdit);
+    }
+
+    goList (input) {
+        console.log("Is this working?");
+        console.log(input);
+    }
+
+    modalAppears() {
+        this.view.modalAppears();
+    }
+
+    modalDisappears() {
+        this.view.modalDisappears();
+    }
+
+    processPrependObj = (name) => {
+        let obj = new AppWork(name);
+        this.prependWork(obj);
+        this.modalDisappears();
+    }
+
+    processNewWorkName(name) {
+        console.log(name.length);
+        //check length
+        if (name.length < 1) {
+            alert("Name have to be at least 1 character long!");
+            return false;
+        } 
+
+        //check if unique
+        if (this.getRecentWork(name) != null){
+            alert("Name needs to be unique!");
+            return false;
+        }
+        return true;
     }
 }

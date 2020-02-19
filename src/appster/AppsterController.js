@@ -31,6 +31,10 @@ export default class AppsterController {
         // FIRST THE NEW WORK BUTTON ON THE HOME SCREEN
         this.registerEventHandler(AppsterGUIId.APPSTER_HOME_NEW_WORK_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CREATE_NEW_WORK]);
 
+        // Creation of new logo modal buttons
+        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_CANCEL_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CANCEL_CREATE_NEW_WORK]);
+        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_ENTER_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_ENTER_CREATE_NEW_WORK]);
+
         // THEN THE CONTROLS ON THE EDIT SCREEN
         this.registerEventHandler(AppsterGUIId.APPSTER_EDIT_HOME_LINK, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_GO_HOME]);
         this.registerEventHandler(AppsterGUIId.APPSTER_EDIT_TRASH, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_DELETE_WORK]);
@@ -86,13 +90,33 @@ export default class AppsterController {
      * This function is called when the user requests to create
      * new work.
      */
-    processCreateNewWork() {
+    processCreateNewWork = (event) => {
         console.log("processCreateNewWork");
 
         // PROMPT FOR THE NAME OF THE NEW LIST
-        
+        this.model.modalAppears();
+
         // MAKE A BRAND NEW LIST
         this.model.goList();
+    }
+
+    //This function is called when user requests to cancel new work
+    processCancelCreateNewWork = (event) => {
+        console.log("processCancelCreateNewWork");
+        this.model.modalDisappears();
+    }
+
+    processEnterCreateNewWork = (event) => {
+        console.log("processEnterCreateNewWork");
+
+        let nameTextField = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD);
+        let workName = nameTextField.value;
+
+        // check for the name requirements
+        if (this.model.processNewWorkName(workName) == true) {
+            // Add to the list
+            this.model.processPrependObj(workName);
+        }
     }
 
     /**
