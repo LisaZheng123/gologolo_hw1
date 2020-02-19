@@ -531,4 +531,14 @@ export default class AppsterView {
         let dialog = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
         dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
    }
+
+   deleteWorkModalAppears() {
+       let dialog = document.getElementById(AppsterGUIId.APPSTER_YES_NO_MODAL); 
+       dialog.classList.add(AppsterGUIClass.IS_VISIBLE);
+   }
+
+   deleteWorkModalDisappears() {
+       let dialog = document.getElementById(AppsterGUIId.APPSTER_YES_NO_MODAL); 
+       dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
+   }
 }

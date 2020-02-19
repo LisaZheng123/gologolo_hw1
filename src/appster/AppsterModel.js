@@ -160,4 +160,16 @@ export default class AppsterModel {
         }
         return true;
     }
+
+    processDeleteWorkModal = (event) => {
+        this.view.deleteWorkModalAppears();
+    }
+
+    deleteWorkModalDisappears() {
+        this.view.deleteWorkModalDisappears();
+    }
+
+    getWorkToEdit= () => {
+        return this.workToEdit;
+    }
 }
