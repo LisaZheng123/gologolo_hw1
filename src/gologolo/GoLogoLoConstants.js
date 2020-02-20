@@ -1,3 +1,10 @@
+export const GoLogoLoCallback = {
+    GOLOGOLO_PROCESS_EDIT_WORK: "processEditText",
+    GOLOGOLO_PROCESS_CANCEL_EDIT_ITEM: "processCancelEditItem",
+    GOLOGOLO_PROCESS_ENTER_EDIT_ITEM: "processEnterEditItem",
+    GOLOGOLO_PROCESS_EDIT_SCREEN_FONT_SLIDER: "processEditScreenFontSlider"
+};
+
 export const GoLogoLoDefaults = {
     GOLOGOLO_DEFAULT_TEXT: "GoLogoLo",
     GOLOGOLO_DEFAULT_FONT_SIZE: 20,
@@ -26,7 +33,19 @@ export const GoLogoLoGUIId = {
     GOLOGOLO_BORDER_THICKNESS_SLIDER: "gologolo_border_thickness_slider",
     GOLOGOLO_PADDING_SLIDER: "gologolo_padding_slider",
     GOLOGOLO_MARGIN_SLIDER: "gologolo_margin_slider",
-    GOLOGOLO_TEXT: "gologolo_text"
+    GOLOGOLO_TEXT: "gologolo_text",
+
+}
+
+export const GoLogoLoModel = {
+    GOLOGOLO_TEXT_INPUT_MODAL: 'gologolo_text_input_modal',
+    GOLOGOLO_TEXT_INPUT_MODAL_FRAME: 'gologolo_text_input_modal_frame',
+    GOLOGOLO_TEXT_INPUT_MODAL_HEADER: 'gologolo_text_input_modal_header',
+    GOLOGOLO_TEXT_INPUT_MODAL_SECTION: 'gologolo_text_input_modal_section',
+    GOLOGOLO_TEXT_INPUT_MODAL_TEXTFIELD: "gologolo_text_input_modal_textfield",
+    GOLOGOLO_TEXT_INPUT_MODAL_ENTER_BUTTON: 'gologolo_text_input_modal_enter_button',
+    GOLOGOLO_TEXT_INPUT_MODAL_CANCEL_BUTTON: 'gologolo_text_input_modal_cancel_button',
+    GOLOGOLO_TEXT_INPUT_MODAL_FOOTER: 'gologolo_text_input_modal_footer'
 };
 
 export const GoLogoLoText = {

@@ -126,11 +126,6 @@ export default class AppsterModel {
         this.view.loadListData(this.listToEdit);
     }
 
-    goList (input) {
-        console.log("Is this working?");
-        console.log(input);
-    }
-
     modalAppears() {
         this.view.modalAppears();
     }

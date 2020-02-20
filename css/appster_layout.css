@@ -81,6 +81,7 @@
     top: 10%;
 }
 #appster_edit_workspace {
+    overflow: auto;
     padding-left: 2%;
     display: grid;
     grid-template-columns: 40% 1fr;

@@ -97,7 +97,6 @@ export default class AppsterController {
         this.model.modalAppears();
 
         // MAKE A BRAND NEW LIST
-        this.model.goList();
     }
 
     //This function is called when user requests to cancel new work

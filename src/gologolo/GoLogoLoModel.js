@@ -44,8 +44,21 @@ export default class GoLogoLoModel extends AppsterModel {
         return appWork;
     }
 
-    updateText() {
- //       this.view.
+    updateText = () => {
+       this.view.editTextModalAppears();
     }
 
+    cancelEditItem = () => {
+        console.log("Cancel Edit Item");
+        this.view.editTextModalDisappears();
+    }
+
+    enterEditItemText = (workName) => {
+        this.view.EditItemText(workName);
+        this.view.editTextModalDisappears();
+    }
+
+    editScreenFontSlider = (font) => {
+         this.view.screenFontSlider(font);
+    }
 }

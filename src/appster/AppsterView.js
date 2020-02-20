@@ -90,6 +90,8 @@ export default class AppsterView {
             appsterRootDiv.appendChild(appsterConfirmModal);
             appsterRootDiv.appendChild(appsterTextInputModal);
 
+            this.loadChildLogo();
+
             // HIDE THE THINGS THAT ARE NOT VISIBLE
             this.showElementWithId(AppsterGUIId.APPSTER_EDIT_SCREEN, false);            
         }
@@ -541,4 +543,5 @@ export default class AppsterView {
        let dialog = document.getElementById(AppsterGUIId.APPSTER_YES_NO_MODAL); 
        dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
    }
+
 }
