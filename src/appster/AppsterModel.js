@@ -144,14 +144,9 @@ export default class AppsterModel {
     processNewWorkName(name) {
         console.log(name.length);
         //check length
-        if (name.length < 1) {
-            alert("Name have to be at least 1 character long!");
-            return false;
-        } 
-
-        //check if unique
-        if (this.getRecentWork(name) != null){
-            alert("Name needs to be unique!");
+        if (name.length < 1 || this.getRecentWork(name) != null) {
+            this.view.duplicateNameModalAppears();
+            this.view.modalDisappears();
             return false;
         }
         return true;
@@ -165,7 +160,7 @@ export default class AppsterModel {
         this.view.deleteWorkModalDisappears();
     }
 
-    getWorkToEdit= () => {
+    getWorkToEdit = () => {
         return this.workToEdit;
     }
 }

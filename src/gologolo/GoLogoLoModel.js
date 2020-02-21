@@ -48,6 +48,11 @@ export default class GoLogoLoModel extends AppsterModel {
        this.view.editTextModalAppears();
     }
 
+    illegalName = () => {
+        this.view.duplicateNameModalDisppears();
+        this.view.modalAppears();
+    }
+
     cancelEditItem = () => {
         console.log("Cancel Edit Item");
         this.view.editTextModalDisappears();

@@ -15,6 +15,8 @@ export default class GoLogoLoController
         // Creation of new logo modal buttons
         this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_CANCEL_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CANCEL_CREATE_NEW_WORK]);
         this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_ENTER_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_ENTER_CREATE_NEW_WORK]);
+        // Illegal Logo Name
+        this.registerEventHandler(AppsterGUIId.APPSTER_CONFIRM_MODAL_OK_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_ILLEGAL_NAME]);
 
         // THEN THE CONTROLS ON THE EDIT SCREEN
         this.registerEventHandler(AppsterGUIId.APPSTER_EDIT_HOME_LINK, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_GO_HOME]);
@@ -58,6 +60,11 @@ export default class GoLogoLoController
             this.model.prependWork(this.model.createNewWork(workName));
             this.model.modalDisappears();
         }
+    }
+
+    processIllegalName = () => {
+        console.log("processIllegalName");
+        this.model.illegalName();
     }
 
     processCancelEditItem = () => {

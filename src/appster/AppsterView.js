@@ -544,4 +544,13 @@ export default class AppsterView {
        dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
    }
 
+   duplicateNameModalAppears() {
+       let dialog = document.getElementById(AppsterGUIId.APPSTER_CONFIRM_MODAL);
+       dialog.classList.add(AppsterGUIClass.IS_VISIBLE);
+   }
+
+   duplicateNameModalDisppears() {
+       let dialog = document.getElementById(AppsterGUIId.APPSTER_CONFIRM_MODAL);
+       dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
+   }
 }

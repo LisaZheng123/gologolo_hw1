@@ -27,7 +27,8 @@ export const AppsterCallback = {
     APPSTER_PROCESS_CONFIRM_DELETE_WORK: "processConfirmDeleteWork",
     APPSTER_PROCESS_CANCEL_DELETE_WORK: "processCancelDeleteWork",
     APPSTER_PROCESS_CANCEL_CREATE_NEW_WORK: "processCancelCreateNewWork",
-    APPSTER_PROCESS_ENTER_CREATE_NEW_WORK: "processEnterCreateNewWork"
+    APPSTER_PROCESS_ENTER_CREATE_NEW_WORK: "processEnterCreateNewWork",
+    APPSTER_PROCESS_ILLEGAL_NAME: "processIllegalName"
     
 };
 
