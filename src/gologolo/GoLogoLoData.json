@@ -13,7 +13,7 @@
         
         {"appster_confirm_modal_prompt_text": "Illegal name, either logo already exists with that name or you left the logo name blank"},
         {"appster_confirm_modal_ok_button_text": "Ok"},
-        {"appster_confirm_modal_footer_text": "Duplicate Name"},
+        {"appster_confirm_modal_footer_text": "Duplicate Name or blank name"},
         
         {"appster_text_input_modal_prompt_text": "Enter a name for your logo: "},
         {"appster_text_input_modal_enter_button_text": "Enter"},

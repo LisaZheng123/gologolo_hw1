@@ -95,8 +95,7 @@ export default class AppsterController {
 
         // PROMPT FOR THE NAME OF THE NEW LIST
         this.model.modalAppears();
-
-        // MAKE A BRAND NEW LIST
+        document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value = "";
     }
 
     //This function is called when user requests to cancel new work

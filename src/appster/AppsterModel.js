@@ -143,7 +143,7 @@ export default class AppsterModel {
 
     processNewWorkName(name) {
         console.log(name.length);
-        //check length
+        //check length and if duplicate
         if (name.length < 1 || this.getRecentWork(name) != null) {
             this.view.duplicateNameModalAppears();
             this.view.modalDisappears();
