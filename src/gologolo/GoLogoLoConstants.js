@@ -2,8 +2,32 @@ export const GoLogoLoCallback = {
     GOLOGOLO_PROCESS_EDIT_WORK: "processEditText",
     GOLOGOLO_PROCESS_CANCEL_EDIT_ITEM: "processCancelEditItem",
     GOLOGOLO_PROCESS_ENTER_EDIT_ITEM: "processEnterEditItem",
-    GOLOGOLO_PROCESS_EDIT_SCREEN_FONT_SLIDER: "processEditScreenFontSlider"
+    
+    GOLOGOLO_PROCESS_EDIT_SCREEN_FONT_SLIDER: "processEditScreenFontSlider",
+    GOLOGOLO_PROCESS_EDIT_SCREEN_TEXT_COLOR_PICKER: "processEditScreenTextColorPicker",
+    GOLOGOLO_PROCESS_EDIT_SCREEN_BACKGROUND_COLOR_PICKER: "processEditScreenBackgroundColorPicker",
+    GOLOGOLO_PROCESS_EDIT_SCREEN_BORDER_COLOR_PICKER: "processEditScreenBorderColorPicker",
+    GOLOGOLO_PROCESS_EDIT_SCREEN_BORDER_RADIUS_SLIDER: "processEditScreenBorderRadiusSlider",
+    GOLOGOLO_PROCESS_EDIT_SCREEN_BORDER_THICKNESS_SLIDER: "processEditScreenBorderThicknessSlider",
+    GOLOGOLO_PROCESS_EDIT_SCREEN_PADDING_SLIDER: "processEditScreenPaddingSlider",
+    GOLOGOLO_PROCESS_EDIT_SCREEN_MARGIN_SLIDER: "processEditScreenMarginSlider"
 };
+
+export const GoLogoLoGUIId = {
+    GOLOGOLO_TOOLBAR: "gologolo_toolbar",
+    GOLOGOLO_EDIT_TEXT_BUTTON: "gologolo_edit_text_button",
+    
+    GOLOGOLO_FONT_SIZE_SLIDER: "gologolo_font_size_slider",
+    GOLOGOLO_TEXT_COLOR_PICKER: "gologolo_text_color_picker",
+    GOLOGOLO_BACKGROUND_COLOR_PICKER: "gologolo_background_color_picker",
+    GOLOGOLO_BORDER_COLOR_PICKER: "gologolo_border_color_picker",
+    GOLOGOLO_BORDER_RADIUS_SLIDER: "gologolo_border_radius_slider",
+    GOLOGOLO_BORDER_THICKNESS_SLIDER: "gologolo_border_thickness_slider",
+    GOLOGOLO_PADDING_SLIDER: "gologolo_padding_slider",
+    GOLOGOLO_MARGIN_SLIDER: "gologolo_margin_slider",
+    GOLOGOLO_TEXT: "gologolo_text",
+
+}
 
 export const GoLogoLoDefaults = {
     GOLOGOLO_DEFAULT_TEXT: "GoLogoLo",
@@ -21,21 +45,6 @@ export const GoLogoLoDefaults = {
 export const GoLogoLoGUIClass = {
     GOLOGOLO_CONTROL_PROMPT: 'gologolo_control_prompt'
 };
-
-export const GoLogoLoGUIId = {
-    GOLOGOLO_TOOLBAR: "gologolo_toolbar",
-    GOLOGOLO_EDIT_TEXT_BUTTON: "gologolo_edit_text_button",
-    GOLOGOLO_FONT_SIZE_SLIDER: "gologolo_font_size_slider",
-    GOLOGOLO_TEXT_COLOR_PICKER: "gologolo_text_color_picker",
-    GOLOGOLO_BACKGROUND_COLOR_PICKER: "gologolo_background_color_picker",
-    GOLOGOLO_BORDER_COLOR_PICKER: "gologolo_border_color_picker",
-    GOLOGOLO_BORDER_RADIUS_SLIDER: "gologolo_border_radius_slider",
-    GOLOGOLO_BORDER_THICKNESS_SLIDER: "gologolo_border_thickness_slider",
-    GOLOGOLO_PADDING_SLIDER: "gologolo_padding_slider",
-    GOLOGOLO_MARGIN_SLIDER: "gologolo_margin_slider",
-    GOLOGOLO_TEXT: "gologolo_text",
-
-}
 
 export const GoLogoLoModel = {
     GOLOGOLO_TEXT_INPUT_MODAL: 'gologolo_text_input_modal',

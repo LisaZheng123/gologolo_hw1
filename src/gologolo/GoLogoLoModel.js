@@ -58,7 +58,35 @@ export default class GoLogoLoModel extends AppsterModel {
         this.view.editTextModalDisappears();
     }
 
-    editScreenFontSlider = (font) => {
-         this.view.screenFontSlider(font);
+    enterEditItemFontSize = (font) => {
+         this.view.enterEditItemFontSize(font);
+    }
+
+    enterEditItemTextColorPicker = (color) => {
+        this.view.enterEditItemTextColorPicker(color);
+    }
+
+    enterEditItemTextBackgroundColorPicker = (backgroundColor) => {
+        this.view.enterEditItemTextBackgroundColorPicker(backgroundColor);
+    }
+
+    enterEditItemTextBorderColorPicker = (borderColor) => {
+        this.view.enterEditItemTextBorderColorPicker(borderColor);
+    }
+
+    enterEditItemTextBorderRadius = (borderRadius) => {
+        this.view.enterEditItemTextBorderRadius(borderRadius);
+    }
+
+    enterEditItemTextBorderThickness = (borderThickness) => {
+        this.view.enterEditItemTextBorderThickness(borderThickness);
+    }
+
+    enterEditItemTextPadding = (padding) => {
+        this.view.enterEditItemTextPadding(padding);
+    }
+
+    enterEditItemTextMargin = (margin) => {
+        this.view.enterEditItemTextMargin(margin);
     }
 }

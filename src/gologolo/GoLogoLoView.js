@@ -77,7 +77,7 @@ export default class GoLogoLoView extends AppsterView {
         let backgroundColorPicker = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER, [], colorPickerAttributes);
         let borderColorPicker = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER, [], colorPickerAttributes);
         let borderRadiusSlider = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER, [], rangeAttributes);
-        let borderThicknessSlider = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER, [], rangeAttributes);
+        let borderThicknessSlider = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER, [], rangeAttributes);
         let paddingSlider = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_PADDING_SLIDER, [], rangeAttributes);
         let marginSlider = this.buildElement(AppsterHTML.INPUT, GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER, [], rangeAttributes);
         let textDiv = this.buildElement(AppsterHTML.DIV, GoLogoLoGUIId.GOLOGOLO_TEXT);
@@ -126,8 +126,10 @@ export default class GoLogoLoView extends AppsterView {
         borderColorPicker.value = work.getBorderColor();
         let borderRadiusSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER);
         borderRadiusSlider.value = work.getBorderRadius();
-        let borderThicknessSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER);
+
+        let borderThicknessSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER);
         borderThicknessSlider.value = work.getBorderThickness();
+        
         let paddingSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_PADDING_SLIDER);
         paddingSlider.value = work.getPadding();
         let marginSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER);
@@ -140,8 +142,14 @@ export default class GoLogoLoView extends AppsterView {
         textDiv.style.color = work.getTextColor();
         textDiv.style.backgroundColor = work.getBackgroundColor();
         textDiv.style.borderColor = work.getBorderColor();
-        textDiv.style.borderRadius = work.getBorderRadius();
-        textDiv.style.borderThickness = work.getBorderThickness();
+        // appended
+        textDiv.style.borderRadius = work.getBorderRadius() + "px";
+        textDiv.style.borderThickness = work.getBorderThickness() + "px";
+        textDiv.style.borderStyle = "solid";
+        textDiv.style.fontSize = work.getFontSize() + "px";
+        textDiv.style.padding = work.getPadding() + "px";
+        textDiv.style.margin = work.getMargin() + "px";
+        textDiv.style.borderWidth = work.getBorderThickness() + "px";
     }
 
     addListItem(initText) {
@@ -181,8 +189,43 @@ export default class GoLogoLoView extends AppsterView {
         textDiv.innerHTML = workName;
     }
 
-    screenFontSlider = (font) => {
-        let fontSizeSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER);
-        fontSizeSlider.value = font;
+    enterEditItemFontSize = (font) => {
+        let text = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
+        text.style.fontSize = font + "px";
+    }
+
+    enterEditItemTextColorPicker = (color) => {
+        let text = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
+        text.style.color = color;
+    }
+
+    enterEditItemTextBackgroundColorPicker = (backgroundColor) => {
+        let text = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
+        text.style.backgroundColor = backgroundColor;
+    }
+
+    enterEditItemTextBorderColorPicker = (borderColor) => {
+        let text = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
+        text.style.borderColor = borderColor;
+    }
+
+    enterEditItemTextBorderRadius = (borderRadius) => {
+        let text = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
+        text.style.borderRadius = borderRadius + "px";
+    }
+
+    enterEditItemTextBorderThickness = (borderThickness) => {
+        let text = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
+        text.style.borderWidth = borderThickness + "px";
+    }
+
+    enterEditItemTextPadding = (padding) => {
+        let text = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
+        text.style.padding = padding + "px";
+    }
+
+    enterEditItemTextMargin = (margin) => {
+        let text = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
+        text.style.margin = margin + "px";
     }
 }
